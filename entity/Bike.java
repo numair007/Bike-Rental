@@ -1,15 +1,18 @@
 package entity;
 
+import java.util.UUID;
+
 public class Bike extends Product{
     public BikeSize bikeSize;
 
-    Bike(String id, BikeSize bikeSize){
-        super(id);
+    public Bike(BikeSize bikeSize){
+        super(UUID.randomUUID().toString());
         this.bikeSize = bikeSize;
     }
 
     @Override
-    int calculateRental() {
-       return 10;
-    }
+        public
+        int calculateRental() {
+           return 10;
+        }
 }

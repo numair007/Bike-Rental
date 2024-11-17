@@ -7,9 +7,10 @@ public class Customer {
     String name;
     Map<String, Rental> rentals;
 
-    Customer(String id, String name){
-        this.id = id;
+    public Customer( String name){
+        this.id = UUID.randomUUID().toString();
         this.name = name;
+        rentals = new HashMap<>();
     }
 
     public String getId(){

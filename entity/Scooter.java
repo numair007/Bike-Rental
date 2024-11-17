@@ -1,16 +1,17 @@
 package entity;
 
+import java.util.UUID;
 
 public class Scooter extends Product{
     ScooterType scooterType;
 
-    Scooter(String id, ScooterType scooterType){
-        super(id);
+    public Scooter(ScooterType scooterType){
+        super(UUID.randomUUID().toString());
         this.scooterType = scooterType;
     }
 
     @Override
-    int calculateRental() {
-       return 10;
-    }
+        public int calculateRental() {
+           return 10;
+        }
 }
